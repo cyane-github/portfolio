@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2uuww2jparja"]
+
+[ext_resource type="Script" path="res://scenes/game.gd" id="1_7fd2g"]
+[ext_resource type="PackedScene" uid="uid://d2t224k4ekx0l" path="res://scenes/levels/level_base.tscn" id="1_vtkvh"]
+[ext_resource type="PackedScene" uid="uid://10136655a8ru" path="res://scenes/entities/player/player.tscn" id="2_h1sos"]
+[ext_resource type="PackedScene" uid="uid://xtmpkv8pvdja" path="res://scenes/ui/ui.tscn" id="4_6d38c"]
+
+[node name="Game" type="Node3D"]
+script = ExtResource("1_7fd2g")
+
+[node name="TestingLevel" parent="." instance=ExtResource("1_vtkvh")]
+
+[node name="Player" parent="." instance=ExtResource("2_h1sos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.09224, 8.09728)
+
+[node name="UI" parent="." instance=ExtResource("4_6d38c")]
